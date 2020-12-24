@@ -1,0 +1,11 @@
+tmp
+*.DS_Store
+*.html
+*.pdf
+*.aux
+*.log
+*.out
+*.gz
+*.bbl
+*.blg
+*.toc
