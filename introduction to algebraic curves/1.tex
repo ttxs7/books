@@ -1,0 +1,103 @@
+\chapter{Fundamental Concepts}\label{c1}
+\section{Algebraic curves in the complex projective plane \texorpdfstring{$P^2\C$}{P2C}}\label{s1.1}
+Suppose $f(x,y)$ is a polynomial with real coefficients in two variables. Then the grapth in $\R^2$ which is defined by the equation 
+\begin{equation}\label{e1.1.1}
+    f(x,y)=0
+\end{equation}
+is called a \textit{real algebraic curve}, the degree of $f(x,y)$ is called the \textit{degree} of this algebraic curve. The reader is undoubtedly already familiar with algebraic curves of degree 1 and 2, which are the straight lines, ellipses, hyperbolas, and parabolas. However, if we are to discuss more general algebraic curves within the realm of real numbers, several problems arise which make it difficult to obtain complete results. The main reason for this is that the real field is not an algebraically closed field. For example, suppose we wish to discuss the number of intersection points of a straight line $L$ with the algebraic curve $C$ given by \eqref{e1.1.1}. Without any loss of generality, we assume that $L$ passes through the origin (this requirement can be easily satisfied by a suitable transformation of coordinates), so that its parametric equations can be written as: 
+\begin{equation}\label{e1.1.2}
+    \begin{cases}
+        x=\alpha t\\
+        y=\beta t
+    \end{cases}
+\end{equation}
+Moreover, suppose 
+$$f(x,y)=f_n(x,y)+f_{n-1}(x,y)+\cdots+f_0, $$
+where each $f_k(x,y)$ is a homogeneous polynomial of degree $k$. By substituting \eqref{e1.1.2} into \eqref{e1.1.1}, we obtain 
+\begin{equation}\label{e1.1.3}
+    f_n(\alpha,\beta)t^n+f_{n-1}(\alpha,\beta)t^{n-1}+\cdots+f_0=0. 
+\end{equation}
+To determine the number of roots of this equation over $\R$ is by no means a simple matter. Moreover, we cannot expect a neat conclusion since the number of real roots is dependent on the nature of the coefficients. But when we consider $f(x,y)$ as a polynomial with complex coefficients in two variables and consider \eqref{e1.1.1} as an algebraic curve in $\C^2$, then the number of intersection points of the complex straight line \eqref{e1.1.2} with the complex algebraic curve \eqref{e1.1.1} is again given by equation \eqref{e1.1.3}. From the well-known fundamental theoerm of algebra, so long as $f_n(\alpha,\beta)\neq0$, equation \eqref{e1.1.3} will have exactly $n$ roots (multiple roots counted with multiplicity). In other words, the complex algebraic curve $C$ of degree $n$ and the complex line $L$ intersect at $n$ points (the intersection points corresponding to multiple roots are thought of as multiple points of intersection). There is one exception to the preceding discussion: if 
+\begin{gather*}
+    f_n(\alpha,\beta)=f_{n-1}(\alpha,\beta)=\cdots=f_{m+1}(\alpha,\beta)=0, \\
+    f_m(\alpha,\beta)\neq0, 
+\end{gather*}
+then $L$ and $C$ intersect in only $m$ points in $\C^2$. In this case we may regard the remaining $n-m$ points of intersection as being at infinity. This viewpoint can be explained in more detail as follows: substituting $1/s$ for $t$ in \eqref{e1.1.3} and multiplicity both sides of the equation by $s^n$, we have 
+\begin{equation}\label{e1.1.3'}\tag{\ref*{e1.1.3}$'$}
+    f_n(\alpha,\beta)+f_{n-1}(\alpha,\beta)s+\cdots+f_0(\alpha,\beta)s^n=0. 
+\end{equation}
+If $f_n(\alpha,\beta)\neq0$, then $s=0$ (which corresponding to $t=\infty$) is not a root of \eqref{e1.1.3'}; if 
+\begin{gather*}
+    f_n(\alpha,\beta)=f_{n-1}(\alpha,\beta)=\cdots=f_{m+1}(\alpha,\beta)=0, \\
+    f_m(\alpha,\beta)\neq0, 
+\end{gather*}
+then $s=0$ (corresponding to $t=\infty$) is a root of \eqref{e1.1.3'} of multiplicity $n-m$. We then say that $L$ and $C$ have a point of intersection of multiplicity $n-m$ at infinity. Hence, for the convenience of our discussion, we must add ``a line at infinity'' to $\C^2$, thereby arriving at the complex projective plane $P^2\C$. 
+
+The most convenient way of adding a line at infinity to $\C^2$ is through the use of homogeneous coordinates. For a point $(x,y)\in\C^2$, its \textit{homogeneous coordinates} are any set of complex numbers $(\zeta,\xi,\eta)$ satisfying 
+\begin{equation}\label{e1.1.4}
+    x=\xi/\zeta, \quad y=\eta/\zeta. 
+\end{equation}
+If $(\zeta,\xi,\eta)$ are homogeneous coordinates for $(x,y)$, then clearly so are $(\lambda\zeta,\lambda\xi,\lambda\eta)$ $(\lambda\in\C,\lambda\neq0)$. In order for \eqref{e1.1.4} to be well defined, it is necessary that $\zeta\neq0$. However, if $\xi$ and $\eta$ are not both $0$, then as $\zeta\to0$ the points $x=\xi/\zeta$, $y=\eta/\zeta$ approach infinity in the direction $\xi:\eta$. Therefore we can let $(0,\xi,\eta)$ denote the point at infinity along the direction $\xi:\eta$. In this way, through homogeneous coordinates we can add a point at infinity to each direction in $\C^2$, and the set of all such points at infinity is called the \textit{line at infinity}, $L_\infty$. $\C^2$ together with $L_\infty$ is called the complex projective plane $P^2\C$. We now describe this process more rigorously in the following. 
+
+In the set $\C^3\backslash\{(0,0,0)\}$ we introduce a relation $\sim$ as follows: 
+\begin{equation}\label{e1.1.5}
+    \begin{gathered}
+        (\zeta,\xi,\eta)\sim(\zeta',\xi',\eta')\\
+        \text{if and only if such that $\exists\lambda\in\C$, $\lambda\neq0$ such that}\\
+        \zeta'=\lambda\zeta, \ \xi'=\lambda\xi, \ \eta'=\lambda\eta. 
+    \end{gathered}
+\end{equation}
+This is obviously an equivalence relation. Accordingly, we divide $\C^3\backslash\{(0,0,0)\}$ into equivalence classes, and the equivalence class containing $(\zeta,\xi,\eta)$ is denoted by $[\zeta,\xi,\eta]$. clearly
+$$[\zeta,\xi,\eta]=[\lambda\zeta,\lambda\xi,\lambda\eta]\quad\forall\lambda\in\C\backslash\{0\}. $$
+The quotient space induced by this equivalence relation (the space of equivalence classes), 
+$$(\C^3\backslash\{(0,0,0)\})/\sim$$
+is called the \textit{complex projective plane} and is denoted by $P^2\C$ (or simply $\P^2$ when there is no danger of confusion). As a quotient space, $P^2\C$ possesses a quotient topology. We shall arrive at a better understanding of $P^2\C$ when we discuss its complex manifold structure in \autoref{s1.7}. 
+
+Let us now examine the representation in homogeneous coordinates of the curve $C$ given by \eqref{e1.1.1}. Substituting 
+$$x=\xi/\zeta, \quad y=\eta/\zeta$$
+into \eqref{e1.1.1} and multiplying both sides of the resulting expression by $\zeta^n$, we obtain 
+$$F(\zeta,\xi,\eta)=f_n(\xi,\eta)+f_{n-1}(\xi,\eta)\zeta+\cdots+f_0\zeta^n=0. $$
+The left side of this equation is a homogeneous polynomial in $\zeta,\xi,\eta$. In general, if $F(\zeta,\xi,\eta)$ is a homogeneous polynomial in $\zeta,\xi,\eta$, then 
+\begin{equation}\label{e1.1.6}
+    F(\zeta,\xi,\eta)=0
+\end{equation}
+represents an \textit{algebraic curve} in $P^2\C$, and the degree of $F$ is called the \textit{degree} of this curve. Equation \eqref{e1.1.6} is called the \textit{homogeneous equation} of this curve. If we restrict ourselves to $\C^2$, then this curve satisfies the \textit{affine equation} 
+\begin{equation}\label{e1.1.7}
+    f(x,y)=0, 
+\end{equation}
+where 
+$$f(x,y)=F(1,x,y). $$
+
+In this way, the homogeneous equation of a curve determine the affine equation of this curve. On the other hand, the degree of the curve and its affine equation uniquely determine its homogeneous equation 
+$$F(\zeta,\xi,\eta)=0$$
+where 
+$$F(\zeta,\xi,\eta)=\zeta^n f(\xi/\zeta,\eta/\zeta). $$
+
+If an algebraic curve $C$ is given by 
+$$F(\zeta,\xi,\eta)=0, $$
+and $F$ decomposes into the product of irreducible homogeneous polynomials 
+$$F=F_1^{m_1}F_2^{m_2}\cdots F_l^{m_l}, $$
+then we write 
+$$C=m_1C_1+m_2C_2+\cdots+m_lC_l$$
+where 
+$$C_j=\{[\zeta,\xi,\eta]|F_j(\zeta,\xi,\eta)=0\}\ (j=1,2,\cdots,l). $$
+Each $C_j$ is called an \textit{irreducible component} of $C$. In the special case when $F$ itself is irreducible, then $C$ is called an \textit{irreducible curve}. 
+
+\section{Riemann surfaces}\label{s1.2}
+
+
+\section{Holomorphic and meromorphic functions}\label{s1.3}
+
+\section{Holomorphic and meromorphic differentials}\label{s1.4}
+
+\section{Differential forms}\label{s1.5}
+
+\section{The Poincar\'e-Hopf formula}\label{s1.6}
+
+\section{Complex manifolds}\label{s1.7}
+
+\section{Algebraic varieties}\label{s1.8}
+
+\section{Smooth points, tangent spaces and the implicit function theorem}\label{s1.9}
+
+\section{Holomorphic mappings from compect Riemann surfaces into complex projective spaces}\label{s1.10}
