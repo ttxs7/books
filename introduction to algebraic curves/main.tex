@@ -5,19 +5,29 @@
 \usepackage{amsthm}
 \usepackage{hyperref}
 \usepackage{authblk}
-\newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{proposition}
-\newtheorem{lemma}{Lemma}
-\newtheorem{definition}{Definition}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\numberwithin{equation}{section}
 \def\theoremautorefname{theorem}
 \def\propositionautorefname{proposition}
 \def\lemmaautorefname{lemma}
+\def\corollaryautorefname{corollary}
 \def\definitionautorefname{definition}
+\def\remarkautorefname{remark}
+\def\exampleautorefname{example}
 \def\R{\mathbb{R}}
 \def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
 \def\P{\mathbb{P}}
-\def\max{\operatornamewithlimits{max}}
-\def\Lip#1{\operatornamewithlimits{Lip}\left(#1\right)}
 \bibliographystyle{plain}
 \title{Introduction to Algebraic Curves}
 \author{Phillip A. Griffiths}
@@ -32,4 +42,5 @@
     \tableofcontents
     \include{1}
     \include{2}
+    \bibliography{main}
 \end{document}
