@@ -1,23 +1,22 @@
-\chapter{Fundamental Concepts}\label{c1}
-\section{Algebraic curves in the complex projective plane \texorpdfstring{$P^2\C$}{P2C}}\label{s1-1}
-Suppose $f(x,y)$ is a polynomial with real coefficients in two variables. Then the grapth in $\R^2$ which is defined by the equation 
+\chapter{基本概念}\label{c1}
+\section{复射影平面\texorpdfstring{$P^2\C$}{P2C}上的代数曲线}\label{s1-1}
+设$f(x,y)$是实系数多项式, $\R^2$上由
 \begin{equation}\label{e1-1-1}
     f(x,y)=0
 \end{equation}
-is called a \textit{real algebraic curve}, the degree of $f(x,y)$ is called the \textit{degree} of this algebraic curve. The reader is undoubtedly already familiar with algebraic curves of degree 1 and 2, which are the straight lines, ellipses, hyperbolas, and parabolas. However, if we are to discuss more general algebraic curves within the realm of real numbers, several problems arise which make it difficult to obtain complete results. The main reason for this is that the real field is not an algebraically closed field. For example, suppose we wish to discuss the number of intersection points of a straight line $L$ with the algebraic curve $C$ given by \eqref{e1-1-1}. Without any loss of generality, we assume that $L$ passes through the origin (this requirement can be easily satisfied by a suitable transformation of coordinates), so that its parametric equations can be written as: 
-\begin{equation}\label{e1-1-2}
+给出的图形称为\textit{实代数曲线}, $f(x,y)$的次数称为这代数曲线的\textit{次数}. 读者已经熟悉了一次和二次的实代数曲线, 但是在实数范围内讨论更一般的代数曲线会有若干不方便之处, 这主要是因为实数域不是代数闭域. 例如, 我们欲讨论这样的问题: 一条直线与代数曲线有多少交点. 不妨设直线过原点, 它的参数方程可以写成\begin{equation}\label{e1-1-2}
     \begin{cases}
         x=\alpha t, \\
         y=\beta t. 
     \end{cases}
 \end{equation}
-Moreover, suppose 
+设
 \[f(x,y)=f_n(x,y)+f_{n-1}(x,y)+\cdots+f_0, \]
-where each $f_k(x,y)$ is a homogeneous polynomial of degree $k$. By substituting \eqref{e1-1-2} into \eqref{e1-1-1}, we obtain 
+其中$f_k(x,y)$ 是$k$次齐次多项式. 把\eqref{e1-1-2}代入\eqref{e1-1-1}得
 \begin{equation}\label{e1-1-3}
     f_n(\alpha,\beta)t^n+f_{n-1}(\alpha,\beta)t^{n-1}+\cdots+f_0=0. 
 \end{equation}
-To determine the number of roots of this equation over $\R$ is by no means a simple matter. Moreover, we cannot expect a neat conclusion since the number of real roots is dependent on the nature of the coefficients. But when we consider $f(x,y)$ as a polynomial with complex coefficients in two variables and consider \eqref{e1-1-1} as an algebraic curve in $\C^2$, then the number of intersection points of the complex straight line \eqref{e1-1-2} with the complex algebraic curve \eqref{e1-1-1} is again given by equation \eqref{e1-1-3}. From the well-known fundamental theoerm of algebra, so long as $f_n(\alpha,\beta)\neq0$, equation \eqref{e1-1-3} will have exactly $n$ roots (multiple roots counted with multiplicity). In other words, the complex algebraic curve $C$ of degree $n$ and the complex line $L$ intersect at $n$ points (the intersection points corresponding to multiple roots are thought of as multiple points of intersection). There is one exception to the preceding discussion: if 
+在实数范围内要判断这样的方程有多少根不是一件容易的事, 但是如果考虑复系数的$f(x,y)$并把\eqref{e1-1-1}看成$\C^2$上的代数曲线, 再来讨论复直线与复代数曲线的交点, 也得到\eqref{e1-1-3}. 由熟知的代数基本定理, 只要$f_n(\alpha,\beta)\neq0$, \eqref{e1-1-3}恰有$n$个根(记重数). In other words, the complex algebraic curve $C$ of degree $n$ and the complex line $L$ intersect at $n$ points (the intersection points corresponding to multiple roots are thought of as multiple points of intersection). There is one exception to the preceding discussion: if 
 \begin{gather*}
     f_n(\alpha,\beta)=f_{n-1}(\alpha,\beta)=\cdots=f_{m+1}(\alpha,\beta)=0, \\
     f_m(\alpha,\beta)\neq0, 
@@ -83,7 +82,7 @@ where
 \[C_j=\{[\zeta,\xi,\eta]|F_j(\zeta,\xi,\eta)=0\}\ (j=1,2,\cdots,l). \]
 Each $C_j$ is called an \textit{irreducible component} of $C$. In the special case when $F$ itself is irreducible, then $C$ is called an \textit{irreducible curve}. 
 
-\section{Riemann surfaces}\label{s1-2}
+\section{Riemann面}\label{s1-2}
 There exists a close relationship between the study of compect Riemann surfaces and that of algebraic curves: any irreducible plane algebraic curve admits a holomorphic parametric representation and the domain of definition of this representation is a compect Riemann surface. More precisely, we have the following \textit{normalization theorem} (its proof will be given in the next chapter). 
 \begin{theorem}
     For any irreducible algebraic curve $C\subset P^2\C$, there exists a compect Riemann surface $\widetilde{C}$ and a holomorphic mapping 
@@ -147,7 +146,7 @@ The main topic of this book is the study of compect Riemann surfaces, that is to
     $\Phi_1$ represents the stereographic projection from the north pole $N$ to $\C$, and 
     \[\Phi_1(X,Y,Z)=\frac{X+iY}{1-Z}. \]
     \begin{figure}[h]
-        \[\includegraphics{figures/1.1}\]
+        \[\includegraphics{figures/1-1}\]
         \caption{Stereographic projection}
     \end{figure}
     Here $X,Y,Z$ denote linear coordinates in $\R^3$. We have 
@@ -169,18 +168,18 @@ The main topic of this book is the study of compect Riemann surfaces, that is to
     The quotient space $C=\C/\Lambda$ of this equivalence relation is called a \textit{complex tours}. It is easily seen that this is a compact, connected Hausdorff topological space. For $\epsilon$ sufficiently small, there exists at most one point of intersection between any disc of radius $\epsilon$ in $\C$ and every equivalence class. 
 \end{example}
 
-\section{Holomorphic and meromorphic functions}\label{s1-3}
+\section{全纯与半纯函数}\label{s1-3}
 
-\section{Holomorphic and meromorphic differentials}\label{s1-4}
+\section{全纯与半纯微分}\label{s1-4}
 
-\section{Differential forms}\label{s1-5}
+\section{微分形式}\label{s1-5}
 
-\section{The Poincar\'e-Hopf formula}\label{s1-6}
+\section{Poincar\'e-Hopf公式}\label{s1-6}
 
-\section{Complex manifolds}\label{s1-7}
+\section{复流形}\label{s1-7}
 
-\section{Algebraic varieties}\label{s1-8}
+\section{代数簇}\label{s1-8}
 
-\section{Smooth points, tangent spaces and the implicit function theorem}\label{s1-9}
+\section{光滑点, 切空间, 隐函数定理}\label{s1-9}
 
-\section{Holomorphic mappings from compect Riemann surfaces into complex projective spaces}\label{s1-10}
+\section{紧Riemann面到复射影空间的全纯映射}\label{s1-10}
