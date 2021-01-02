@@ -12,6 +12,9 @@
     设$F_i$是不可约齐次多项式, $C_i$是$F_i$决定的代数曲线, 定义$m_1C_1+\cdots+m_l C_l$为$F_1^{m_1}\cdots F_l^{m_l}$决定的代数曲线. 
 \end{definition}
 \section{Riemann面}\label{s1-2}
+\begin{definition}
+    设$C$是连通Hausdorff空间, $\{U_\alpha\}$是$C$的开覆盖, $z_\alpha:U_\alpha\to\C$是到开集$z_\alpha(U_\alpha)$的同胚映射, $z_\beta\circ z_\alpha^{-1}$是$z_\alpha(U_\alpha\cap U_\beta)$上的全纯单射, 则称$C$为Riemann面, $(U_\alpha,z_\alpha)$为全纯坐标卡, $\{(U_\alpha,z_\alpha)\}$为全纯坐标卡系. 
+\end{definition}
 \begin{theorem}
     For any irreducible algebraic curve $C\subset P^2\C$, there exists a compect Riemann surface $\widetilde{C}$ and a holomorphic mapping 
     \[\sigma:\widetilde{C}\to P^2\C\]
@@ -26,20 +29,6 @@ On the other hand, any compect Riemann surface can be represented by an algebrai
 \end{theorem}
 
 From this we see that the study of compect Riemann surfaces and that of plane algebraic curves are in fact the same thing. These two topics form the kernel of this book. In this section, we begin by giving the definition of a Riemann surface and the related basic results on topological classification. 
-\begin{definition}
-    A \textit{Riemann surface} is a connected Hausdorff topological space $C$ together with an open covering $\{U_\alpha\}$ of $C$ and a family of mappings 
-    \[z_\alpha:U_\alpha\to\C\]
-    such that
-    \begin{enumerate}
-        \item each $z_\alpha:U_\alpha\to\C$ is a homeomorphism of $U_\alpha$ onto an open subset of $\C$; 
-        \item if $U_\alpha\cap U_\beta\neq\varnothing$, then the function 
-        \[z_\beta\circ z_\alpha^{-1}:z_\alpha(U_\alpha\cap U_\beta)\to z_\beta(U_\alpha\cap U_\beta)\]
-        is biholomorphic (i.e., the function itself as well as its inverse are both holomorphic). 
-    \end{enumerate}
-    We call such a $(U_\alpha,z_\alpha)$ a local holomorphic coordinate, and $\{(U_\alpha,z_\alpha)\}$ a holomorphic coordinate covering. 
-\end{definition}
-
-The main topic of this book is the study of compect Riemann surfaces, that is to say, Riemann surfaces which as topological spaces are compect. 
 \begin{example}[The set of extended complex numbers $\Sigma=\C\cup\{\infty\}$ (one point compactification of complex numbers)]
     $\Sigma$ is obviously a compect, connected Hausdorff topological space. Now consider the covering $\{U_0,U_1\}$: 
     \[U_0=\Sigma\backslash\{\infty\}=\C, \quad U_1=\Sigma\backslash\{0\}\]
@@ -92,7 +81,9 @@ The main topic of this book is the study of compect Riemann surfaces, that is to
     \[\chi=2-2g. \]
 \end{definition}
 \section{全纯与半纯函数}\label{s1-3}
-
+\begin{definition}
+    设$C$是Riemann面, 
+\end{definition}
 \section{全纯与半纯微分}\label{s1-4}
 
 \section{微分形式}\label{s1-5}
