@@ -12,76 +12,17 @@
     设$F_i$是不可约齐次多项式, $C_i$是$F_i$决定的代数曲线, 定义$m_1C_1+\cdots+m_l C_l$为$F_1^{m_1}\cdots F_l^{m_l}$决定的代数曲线. 
 \end{definition}
 \section{Riemann面}\label{s1-2}
-\begin{theorem}
-    For any irreducible algebraic curve $C\subset P^2\C$, there exists a compect Riemann surface $\widetilde{C}$ and a holomorphic mapping 
-    \[\sigma:\widetilde{C}\to P^2\C\]
-    such that $\sigma(\widetilde{C})=C$, and $\sigma$ is injective on the inverse image of the set of smooth points of $C$. 
-\end{theorem}
-
-Such a compect Riemann surface $\widetilde{C}$ together with the holomorphic mapping $\sigma$ as above, is called the \textit{normalization} of $C$. Normalization is a powerful tool in the study of algebraic curves. 
-
-On the other hand, any compect Riemann surface can be represented by an algebraic curve. This is another basic fact which we shall be using throughout this book: 
-\begin{theorem}
-    Any compect Riemann surface $\widetilde{C}$ can be obtained through the normalization of a certain plane algebraic curve $C$ with at most ordinary double points (for the precise definition, see \autoref{s2-1}). That is to say, there exists a holomorphic mapping $\sigma:\widetilde{C}\to P^2\C$, such that $\sigma(\widetilde{C})$ is an algebraic curve possessing at most ordinary double points. \footnote{One proof of this theorem makes use of the theory of sheaf cohomology. The discussion in the appendix of this book outlines the proof; for a complete proof, refer to either \cite[chapter 2]{MR1288523} or \cite[section 5.21]{MR703513}.}
-\end{theorem}
-
-From this we see that the study of compect Riemann surfaces and that of plane algebraic curves are in fact the same thing. These two topics form the kernel of this book. In this section, we begin by giving the definition of a Riemann surface and the related basic results on topological classification. 
 \begin{definition}
-    A \textit{Riemann surface} is a connected Hausdorff topological space $C$ together with an open covering $\{U_\alpha\}$ of $C$ and a family of mappings 
-    \[z_\alpha:U_\alpha\to\C\]
-    such that
-    \begin{enumerate}
-        \item each $z_\alpha:U_\alpha\to\C$ is a homeomorphism of $U_\alpha$ onto an open subset of $\C$; 
-        \item if $U_\alpha\cap U_\beta\neq\varnothing$, then the function 
-        \[z_\beta\circ z_\alpha^{-1}:z_\alpha(U_\alpha\cap U_\beta)\to z_\beta(U_\alpha\cap U_\beta)\]
-        is biholomorphic (i.e., the function itself as well as its inverse are both holomorphic). 
-    \end{enumerate}
-    We call such a $(U_\alpha,z_\alpha)$ a local holomorphic coordinate, and $\{(U_\alpha,z_\alpha)\}$ a holomorphic coordinate covering. 
+    设$C$是不可约代数曲线, $\widetilde{C}$是紧Riemann面, $\sigma:\widetilde{C}\to\P^2$是全纯映射满足$\sigma(\widetilde{C})=C$且在$C$的光滑点上一一, 称$(\widetilde{C},\sigma)$为$C$的\textit{正则化}. 
 \end{definition}
-
-The main topic of this book is the study of compect Riemann surfaces, that is to say, Riemann surfaces which as topological spaces are compect. 
-\begin{example}[The set of extended complex numbers $\Sigma=\C\cup\{\infty\}$ (one point compactification of complex numbers)]
-    $\Sigma$ is obviously a compect, connected Hausdorff topological space. Now consider the covering $\{U_0,U_1\}$: 
-    \[U_0=\Sigma\backslash\{\infty\}=\C, \quad U_1=\Sigma\backslash\{0\}\]
-    and the mapping 
-    \begin{align*}
-        z_0:U_0&\to\C, \\
-        z&\mapsto z; \\
-        z_1:U_1&\to\C, \\
-        z&\mapsto\begin{cases}
-            0&z=\infty, \\
-            1/z&z\neq\infty. 
-        \end{cases}
-    \end{align*}
-    clearly
-    \begin{align*}
-        z_1\circ z_0^{-1}:\C\backslash\{0\}&\to\C\backslash\{0\}, \\
-        z&\mapsto1/z
-    \end{align*}
-    is biholomorphic, and likewise $z_0\circ z_1^{-1}$. In this way $\Sigma$ becomes a compact Riemann surface. 
-
-    Since we can identify the unit sphere $S$ with $\Sigma$ through stereographic projection, $S$ therefore also naturally becomes a Riemann surface, called the \textit{Riemann sphere}. The precise coordinate representation is as follows: let $N=(0,0,1)$ denote the north pole and $P=(0,0,-1)$ denote the south pole. Consider the covering $\{U_0,U_1\}$ of $S$ and the mappings $\Phi_0,\Phi_1$: 
-    \begin{gather*}
-        U_0=S\backslash\{P\}, \quad\Phi_0:U_0\to\C; \\
-        U_1=S\backslash\{N\}, \quad\Phi_1:U_1\to\C. 
-    \end{gather*}
-    Here $\Phi_0$ represents the stereographic projection from the south pole $P$ to $\C$. Taking its conjugate we have 
-    \[\Phi_0(X,Y,Z)=\frac{X-iY}{1+Z}; \]
-    $\Phi_1$ represents the stereographic projection from the north pole $N$ to $\C$, and 
-    \[\Phi_1(X,Y,Z)=\frac{X+iY}{1-Z}. \]
-    Here $X,Y,Z$ denote linear coordinates in $\R^3$. We have 
-    \begin{align*}
-        \Phi_1\circ\Phi_0^{-1}:\C\backslash\{0\}&\to\C\backslash\{0\}, \\
-        z&\mapsto1/z, \\
-        \Phi_0\circ\Phi_1^{-1}:\C\backslash\{0\}&\to\C\backslash\{0\}, \\
-        z&\mapsto1/z. 
-    \end{align*}
-    It is clear that $\Phi_1\circ\Phi_0^{-1}$ and $\Phi_0\circ\Phi_1^{-1}$ are both biholomorphic. 
-
-    The Riemann sphere is a compect Riemann surface when it has been constructed by either of the two above procedures, viz., either from the extended complex plane or from the unit sphere obtained by stereographic projection. 
-\end{example}
+\begin{theorem}
+    设$C$是不可约代数曲线, 则存在$C$的正则化. 
+\end{theorem}
+\begin{theorem}
+    设$\widetilde{C}$是紧Riemann面, 则存在至多具有通常二重点的代数曲线$C$和映射$\sigma$使得$(\widetilde{C},\sigma)$为$C$的正则化. 
+\end{theorem}
 \begin{example}[复环面$\C/\Lambda$]
-    设复数$w_1,w_2$实线性无关(即不存在实数$\lambda_1,\lambda_2$, $|\lambda_1|+|\lambda_2|\neq0$, 使得$\lambda_1w_1+\lambda_2w_2=0$). 它们在$\C$上定义了一个\textit{格}. 
+    设复数$w_1,w_2$实线性无关. 它们在$\C$上定义了一个\textit{格}. 
     \[\Lambda=\{m_1w_1+m_2w_2|m_1,m_2\in\Z\}. \]
     $\C/\Lambda$称为\textit{复环面}. 易知这是一个紧Riemann面. 
 \end{example}
