@@ -1,53 +1,95 @@
 \chapter{基本概念}\label{c1}
 \section{代数曲线}\label{s1-1}
 \begin{definition}
-    在$\C^3\backslash\{(0,0,0)\}$上建立等价关系: $(\zeta,\xi,\eta)\sim(\zeta',\xi',\eta')$当且仅当$\exists\lambda\in\C$, $\lambda\neq0$使得$(\zeta,\xi,\eta)=\lambda(\zeta',\xi',\eta')$. 定义$[\zeta,\xi,\eta]$是$(\zeta,\xi,\eta)$所在的等价类, \textit{复射影平面}$\P^2=(\C^3\backslash\{(0,0,0)\})/\sim$. 
+    在$\C^3\backslash\{(0,0,0)\}$上建立等价关系: $(\zeta,\xi,\eta)\sim(\zeta',\xi',\eta')$当且仅当$\exists\lambda\in\C$, $\lambda\neq0$使得$(\zeta,\xi,\eta)=\lambda(\zeta',\xi',\eta')$. 定义$[\zeta,\xi,\eta]$为$(\zeta,\xi,\eta)$所在的等价类, \textit{复射影平面}$\P^2=(\C^3\backslash\{(0,0,0)\})/\sim$. 
 \end{definition}
 \begin{definition}
-    设$F(\zeta,\xi,\eta)$是齐次多项式, 称$C=\{[\zeta,\xi,\eta]|F(\zeta,\xi,\eta)=0\}$为$\deg F$次\textit{代数曲线}. 如果$F$不可约, 称$C$不可约. 
+    设$F(\zeta,\xi,\eta)$是齐次多项式. 称$C=\{[\zeta,\xi,\eta]|F(\zeta,\xi,\eta)=0\}$是$\deg F$次\textit{代数曲线}. 若$F$不可约, 则称$C$不可约. 
 \end{definition}
-\begin{remark}$F(\zeta,\xi,\eta)=\zeta^{\deg F}F(1,\frac\xi\zeta,\frac\eta\zeta)$, 从而代数曲线由它在$\C$上的投影和次数决定. 
+\begin{remark}$F(\zeta,\xi,\eta)=\zeta^{\deg F}F(1,\frac\xi\zeta,\frac\eta\zeta)$. 从而代数曲线由它在$\C$上的投影和次数决定. 
 \end{remark}
 \begin{definition}
-    设$F_i$是不可约齐次多项式, $C_i$是$F_i$决定的代数曲线, 定义$m_1C_1+\cdots+m_l C_l$是$F_1^{m_1}\cdots F_l^{m_l}$决定的代数曲线. 
+    设$F_i$是不可约齐次多项式, $C_i$是$F_i$决定的代数曲线. 定义$m_1C_1+\cdots+m_l C_l$为$F_1^{m_1}\cdots F_l^{m_l}$决定的代数曲线. 
 \end{definition}
 
 \section{Riemann面}\label{s1-2}
 \begin{definition}
-    设$C$是连通Hausdorff空间, $\{U_\alpha\}$是$C$的开覆盖, $z_\alpha:U_\alpha\to\C$是到开集$z_\alpha(U_\alpha)$的同胚映射, $z_\beta\circ z_\alpha^{-1}$是$z_\alpha(U_\alpha\cap U_\beta)$上的全纯单射, 称$C$为\textit{Riemann面}, $(U_\alpha,z_\alpha)$为\textit{全纯坐标卡}, $\{(U_\alpha,z_\alpha)\}$为\textit{全纯坐标卡系}. 
+    定义\textit{Riemann面}为连通复$1$维全纯流形. 
+\end{definition}
+\begin{example}[复环面]
+    设$\Lambda=\{m_1w_1+m_2w_2|m_1,m_2\in\Z\}$, 其中复数$w_1,w_2$实线性无关. 显然$\C/\Lambda$带上自然的拓扑和全纯微分结构是紧Riemann面. 
+\end{example}
+\begin{definition}
+    设$C$是紧Riemann面. 显然$C$是紧致连通可定向的实二维流形, 从而同胚于一个有若干环柄的球面. 定义$C$的\textit{亏格}为环柄的个数, \textit{Euler示性数}为$\chi=2-2g$. 
 \end{definition}
 \begin{definition}
-    设复数$w_1,w_2$实线性无关, 称\\
-    $\Lambda=\{m_1w_1+m_2w_2|m_1,m_2\in\Z\}$为\textit{格}, 
-    $\C/\Lambda$为\textit{复环面}. 显然$\C/\Lambda$是紧Riemann面. 
-\end{definition}
-\begin{definition}
-    设$C$是紧Riemann面, 显然$C$是紧致光滑可定向的实二维流形, 从而同胚于一个有若干环柄的球面, 定义$C$的\textit{亏格}为环柄的个数, \textit{Euler示性数}为$\chi=2-2g$. 
-\end{definition}
-\begin{definition}
-    设$C$是不可约代数曲线, $\widetilde{C}$是紧Riemann面, $\sigma:\widetilde{C}\to\P^2$是全纯映射满足$\sigma(\widetilde{C})=C$且在$C$的光滑点上一一, 称$(\widetilde{C},\sigma)$为$C$的\textit{正则化}. 
+    设$C$是不可约代数曲线, $\widetilde{C}$是紧Riemann面, $\sigma:\widetilde{C}\to\P^2$是全纯映射满足$\sigma(\widetilde{C})=C$且在$C$的光滑点上一一, 则称$(\widetilde{C},\sigma)$是$C$的\textit{正则化}. 
 \end{definition}
 \begin{theorem}
     设$C$是不可约代数曲线, 则存在$C$的正则化. 
 \end{theorem}
 \begin{theorem}
-    设$\widetilde{C}$是紧Riemann面, 则存在至多具有通常二重点的代数曲线$C$和映射$\sigma$使得$(\widetilde{C},\sigma)$为$C$的正则化. 
+    设$\widetilde{C}$是紧Riemann面, 则存在至多具有通常二重点的代数曲线$C$和映射$\sigma$使得$(\widetilde{C},\sigma)$是$C$的正则化. 
 \end{theorem}
 
-\section{全纯与半纯函数}\label{s1-3}
+\section{全纯和半纯函数}\label{s1-3}
 \begin{definition}
-    设$C$是Riemann面, 
+    设$C$是Riemann面. 定义$\O(C)$($K(C)$)为$C$上全(半)纯函数集. 显然$\O(C)$是代数, $K(C)$是域. 
 \end{definition}
-\section{全纯与半纯微分}\label{s1-4}
+\begin{theorem}
+    紧Riemann面上的全纯函数只能是常值函数. 
+\end{theorem}
+\begin{theorem}
+    $K(S)\cong\C(z)$. 
+\end{theorem}
+\begin{definition}
+    设$C$是Riemann面, $f\in K(C)$, $p\in C$. 
+    \begin{enumerate}
+        \item 若$f$不恒为$0$, 则$p$点附近显然有$f\circ z^{-1}(z)=(z-z(p))^\nu h(z)$, 其中$h$全纯, $h(z(p))\neq0$, $\nu\in\Z$. 显然$\nu$不依赖于局部坐标的选取. 定义$\nu_p(f)=\nu$. 
+        \item 若$f$恒为$0$, 则定义$\nu_p(f)=0$. 
+    \end{enumerate}
+    称$\nu_p(f)$为$f$在$p$点的\textit{重数}. 
+\end{definition}
+\begin{definition}
+    设$C,C'$是Riemann面, $f:C\to C'$是全纯映射, $p\in C$. 
+    \begin{enumerate}
+        \item 若$f$不恒为常值, 则显然存在局部坐标使得$p$点附近$w\circ f\circ z^{-1}(z)=z^\mu$, 其中$\mu\in\Z_+$. 显然$\mu$不依赖于局部坐标的选取. 定义$f$在$p$点的\textit{分歧指数}为$\mu-1$. 
+        \item 若$f$恒为常值, 则定义$f$在$p$点的\textit{分歧指数}为$0$. 
+    \end{enumerate}
+\end{definition}
+\begin{remark}
+    设$f\in K(C)$, 则$f$是到$S$的全纯映射. 显然$|\nu_p(f)|$等于$f$在$p$点的分歧指数. 
+\end{remark}
 
-\section{微分形式}\label{s1-5}
+\section{全纯和半纯微分}\label{s1-4}
+\begin{definition}
+    设$C$是Riemann面. 定义$\Omega^1(C)$($K^1(C)$)为$C$上的全(半)纯微分集. 
+\end{definition}
+\begin{proposition}
+    设$w_0,w_1\in K^1(C)$, $w_0$不恒为$0$, 则$w_1/w_0\in K(C)$. 
+\end{proposition}
+\begin{proposition}
+    $K^1(S)=\{r(z)dz|r(z)\in\C(z)\}$. 
+\end{proposition}
+\begin{proposition}
+    $\Omega^1(S)=\{0\}$. 
+\end{proposition}
+\begin{definition}
+    设$C$是Riemann面, $w\in K^1(C)$, $p\in C$附近$w=fdz$. 定义$\nu_p(w)=\nu_p(f)$. 显然$\nu_p(w)$不依赖于局部坐标的选取. 
+\end{definition}
+\begin{theorem}[留数定理]
+    设$C$是紧Riemann面, $w\in K^1(C)$, 则$\sum\limits_{p\in C}\Res_p(w)=0$. 
+\end{theorem}
+\begin{theorem}
+    设$C$是紧Riemann面, $f\in K(C)$, 则$\sum\limits_{p\in C}\nu_p(f)=0$. 
+\end{theorem}
 
 \section{Poincar\texorpdfstring{\'e}{e}-Hopf公式}\label{s1-6}
-
-\section{复流形}\label{s1-7}
-
-\section{代数簇}\label{s1-8}
-
-\section{光滑点, 切空间, 隐函数定理}\label{s1-9}
+\begin{theorem}
+    设$C$是紧Riemann面, $w\in K^1(C)$, 则$\sum\limits_{p\in C}\nu_p(w)=-\chi(C)$. 
+\end{theorem}
 
 \section{紧Riemann面到复射影空间的全纯映射}\label{s1-15}
+\begin{theorem}
+    设$C$是紧Riemann面, $n\in\Z_+$, 则存在从\\$\{(f_0,\dots,f_n)|f_i\in K(C),f_i\text{线性无关}\}$到$\{f:C\to\P^n|f\text{全纯非退化}\}$的满射. 
+\end{theorem}
